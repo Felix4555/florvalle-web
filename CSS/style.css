@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #ffffff2e;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a6cf7;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+#logo:hover {
+  color: #1d3ede;
+}
+
+/* --- NAV LINKS --- */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4a6cf7;
+}
+
+.contenedor
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    white-space: nowrap;          /* Mantiene todo en una sola línea */
+    overflow: hidden;             /* Oculta el texto que aún no aparece */
+    border-right: 3px solid white; /* Simula el cursor */
+    width: 0;                     /* Empieza sin mostrar nada */
+    animation: typing 4s steps(40, end) forwards, blink 0.7s step-end infinite;
+    color: black;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Parpadeo del cursor */
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.notificacion {
+  display: none;
+  text-align: center;
+  background-color: #4a6cf7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.Servicios {
+    display: flex;             /* Las pone en fila */
+    justify-content: center;   /* Centra las cards */
+    gap: 20px;                 /* Espacio entre ellas */
+    padding: 20px;
+    flex-wrap: wrap;           /* Si la pantalla es pequeña, bajan en otra línea */
+}
+
+.Servicios article {
+    background-color: #fff;    /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    width: 300px;
+    text-align: center;
+    overflow: hidden;          /* Para que la imagen no sobresalga */
+    transition: transform 0.3s;
+}
+
+.Servicios article:hover {
+    transform: scale(1.05);    /* Efecto al pasar el mouse */
+}
+
+.Servicios img {
+    width: 100%;               /* Imagen ocupa todo el ancho */
+    height: 200px;
+    object-fit: cover;         /* Ajusta sin deformar */
+}
+
+.Servicios p {
+    padding: 15px;
+    color: #333;
+}
+
+.Nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f7fa; /* Fondo suave y moderno */
+    border-radius: 20px;       /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Sombra ligera */
+}
+
+.Nosotros img {
+    width: 45%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.Nosotros .contenido {
+    width: 45%;
+}
+
+.Nosotros h2 {
+    font-size: 2rem;
+    color: #2c3e50; /* Color moderno y elegante */
+    margin-bottom: 15px;
+}
+
+.Nosotros p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 📱 Adaptable para móvil */
+@media (max-width: 768px) {
+    .Nosotros {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .Nosotros img, .Nosotros .contenido {
+        width: 100%;
+    }
+}
+
+.contacto {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f5f7fa;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.contacto h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre campos */
+}
+
+.contacto .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contacto input[type="text"]:focus,
+.contacto input[type="email"]:focus,
+.contacto textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+    outline: none;
+}
+
+.contacto input[type="submit"] {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contacto input[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Adaptable a móvil */
+@media (max-width: 600px) {
+    .contacto {
+        padding: 30px 20px;
+    }
+}
+
+footer {
+  background: linear-gradient(135deg, #f7f7f7, #e6f0ff);
+  color: #333;
+  text-align: center;
+  padding: 25px 10px;
+  font-family: 'Poppins', sans-serif;
+  border-top: 2px solid #b3c7ff;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.social-icons a {
+  color: #4a6cf7;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1d3ede;
+  transform: scale(1.2);
+}
+@media (max-width: 600px) {
+  .footer-content {
+    gap: 8px;
+  }
+
+  .social-icons a {
+    font-size: 1.1rem;
+    gap: 12px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #4a6cf7;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #f9faff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+    text-align: right;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
